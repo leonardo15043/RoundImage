@@ -10,9 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var facePicture: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        facePicture.layer.cornerRadius = facePicture.frame.size.width / 2
+        facePicture.clipsToBounds = true
+        facePicture.layer.borderColor = UIColor.red.cgColor
+        facePicture.layer.borderWidth = 30
+        
     }
 
 
